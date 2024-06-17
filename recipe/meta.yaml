@@ -35,6 +35,7 @@ requirements:
 test:
   imports:
     - mariadb
+    - mariadb.constants
   commands:
     - pip check
   requires:
