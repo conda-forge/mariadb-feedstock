@@ -10,7 +10,6 @@ source:
   sha256: a332893e3ef7ceb7970ab4bd7c844bcb4bd68a051ca51313566f9808d7411f2d
 
 build:
-  noarch: python
   number: 0
   rpaths:
     - lib/mariadb
