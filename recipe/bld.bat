@@ -10,4 +10,5 @@ set "LIB=%LIB%;%MARIADB_CC_LIB%"
 
 set "MARIADB_CC_INSTALL_DIR=%MARIADB_CC_LIBRARY%"
 
+%PYTHON% setup.py build
 %PYTHON% -m pip install . -vv --no-deps --no-build-isolation
