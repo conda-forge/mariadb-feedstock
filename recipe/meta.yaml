@@ -11,7 +11,6 @@ source:
 
 build:
   number: 1
-  skip: True  # [py<38]
   rpaths:
     - lib/mariadb
 
@@ -21,14 +20,14 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
   host:
-    - python >=3.8
+    - python
     - wheel
     - setuptools
     - packaging
     - pip
     - mariadb-connector-c
   run:
-    - python >=3.8
+    - python
     - packaging
     - mariadb-connector-c
 
