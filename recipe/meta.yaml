@@ -10,7 +10,7 @@ source:
   sha256: a332893e3ef7ceb7970ab4bd7c844bcb4bd68a051ca51313566f9808d7411f2d
 
 build:
-  number: 2
+  number: 3
   rpaths:
     - lib/mariadb
 
@@ -25,11 +25,11 @@ requirements:
     - setuptools
     - packaging
     - pip
-    - mariadb-connector-c
+    - mariadb-connector-c <=3.3.10
   run:
     - python
     - packaging
-    - mariadb-connector-c
+    - mariadb-connector-c <=3.3.10
 
 test:
   imports:
