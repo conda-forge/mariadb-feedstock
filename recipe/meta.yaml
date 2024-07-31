@@ -39,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - setuptools
 
 about:
   home: https://www.github.com/mariadb-corporation/mariadb-connector-python
