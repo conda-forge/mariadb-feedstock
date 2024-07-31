@@ -20,14 +20,14 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
   host:
-    - python
+    - python >=3.8
     - wheel
     - setuptools
     - packaging
     - pip
     - mariadb-connector-c
   run:
-    - python
+    - python >=3.8
     - packaging
     - mariadb-connector-c
 
@@ -46,7 +46,7 @@ about:
   summary: Python MariaDB extension
   description: |
     MariaDB Connector/Python enables python programs to access MariaDB and MySQL databases, using an API which is compliant with the Python DB API 2.0 (PEP-249). It is written in C and uses MariaDB Connector/C client library for client server communication.
-  license: LGPL-2.1-only
+  license: LGPL-2.1-or-later
   license_file: LICENSE
 
 extra:
