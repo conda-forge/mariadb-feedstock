@@ -1,5 +1,5 @@
 {% set name = "mariadb" %}
-{% set version = "1.1.11" %}
+{% set version = "1.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mariadb-{{ version }}.tar.gz
-  sha256: cf6647cee081e21d0994b409ba8c8fa2077f3972f1de3627c5502fb31d14f806
+  sha256: 50b02ff2c78b1b4f4628a054e3c8c7dd92972137727a5cc309a64c9ed20c878c
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/mariadb
 
