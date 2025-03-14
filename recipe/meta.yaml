@@ -10,7 +10,7 @@ source:
   sha256: cf6647cee081e21d0994b409ba8c8fa2077f3972f1de3627c5502fb31d14f806
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/mariadb
 
@@ -21,6 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
+    - mariadb-connector-c                    # [build_platform != target_platform]
   host:
     - python
     - wheel
