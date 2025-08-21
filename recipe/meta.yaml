@@ -10,7 +10,7 @@ source:
   sha256: 50b02ff2c78b1b4f4628a054e3c8c7dd92972137727a5cc309a64c9ed20c878c
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/mariadb
 
