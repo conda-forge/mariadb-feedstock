@@ -19,6 +19,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
+    - wheel  # [win]
+    - setuptools  # [win]
+    - packaging  # [win]
   host:
     - python
     - wheel
