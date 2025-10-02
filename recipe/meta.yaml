@@ -27,11 +27,11 @@ requirements:
     - packaging
     - pip
     - mariadb-connector-c
+    - zlib  # [win]
   run:
     - python
     - packaging
     - mariadb-connector-c
-    - zlib  # [win]
 
 test:
   imports:
