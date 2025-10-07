@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mariadb-{{ version }}.tar.gz
   sha256: 50b02ff2c78b1b4f4628a054e3c8c7dd92972137727a5cc309a64c9ed20c878c
+  patches:
+    - 0001-Depend-on-zlib-on-Windows.patch
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/mariadb
 
@@ -19,6 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
+    - zlib  # [win]
   host:
     - python
     - wheel
@@ -26,6 +29,7 @@ requirements:
     - packaging
     - pip
     - mariadb-connector-c
+    - zlib  # [win]
   run:
     - python
     - packaging
