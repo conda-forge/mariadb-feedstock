@@ -1,5 +1,5 @@
 {% set name = "mariadb" %}
-{% set version = "1.1.12" %}
+{% set version = "1.1.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mariadb-{{ version }}.tar.gz
-  sha256: 50b02ff2c78b1b4f4628a054e3c8c7dd92972137727a5cc309a64c9ed20c878c
+  sha256: e6d702a53eccf20922e47f2f45cfb5c7a0c2c6c0a46e4ee2d8a80d0ff4a52f34
   patches:
     - 0001-Depend-on-zlib-on-Windows.patch
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/mariadb
 
