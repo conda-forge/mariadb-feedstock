@@ -24,19 +24,19 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - zlib  # [win]
-    - mariadb-connector-c >=3.4.8 # [build_platform != target_platform]
+    - mariadb-connector-c  # [build_platform != target_platform]
   host:
     - python
     - wheel
     - setuptools
     - packaging
     - pip
-    - mariadb-connector-c >=3.4.8 # [build_platform != target_platform]
+    - mariadb-connector-c  # [build_platform != target_platform]
     - zlib  # [win]
   run:
     - python
     - packaging
-    - mariadb-connector-c >=3.4.8 # [build_platform != target_platform]
+    - mariadb-connector-c  # [build_platform != target_platform]
 
 test:
   imports:
