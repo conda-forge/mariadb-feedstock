@@ -30,12 +30,12 @@ requirements:
     - setuptools
     - packaging
     - pip
-    - mariadb-connector-c
+    - mariadb-connector-c >=3.4.8
     - zlib  # [win]
   run:
     - python
     - packaging
-    - mariadb-connector-c
+    - mariadb-connector-c >=3.4.8
 
 test:
   imports:
