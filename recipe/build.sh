@@ -8,5 +8,9 @@ export MARIADB_CC_LIBRARY="${PREFIX}/include/mariadb"
 export PATH="$MARIADB_CC_LIB:$MARIADB_CC_LIBRARY:${PATH}"
 export MARIADB_CONFIG="${PREFIX}/bin/mariadb_config"
 
+if [[ "$CONDA_SUBDIR" == "osx-arm64" ]]; then
+	export CXX="$CXX --cc"
+fi
+
 ${PYTHON} setup.py build
 ${PYTHON} -m pip install . -vv --no-deps --no-build-isolation
