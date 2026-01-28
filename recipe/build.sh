@@ -8,8 +8,8 @@ export MARIADB_CC_LIBRARY="${PREFIX}/include/mariadb"
 export PATH="$MARIADB_CC_LIB:$MARIADB_CC_LIBRARY:${PATH}"
 export MARIADB_CONFIG="${PREFIX}/bin/mariadb_config"
 
-if [[ "$CONDA_SUBDIR" == "osx-arm64" ]]; then
-	export CXX="$CXX --cc"
+if [[ "${target_platform}" == "osx-arm64" ]]; then
+	export CXXFLAGS="$CXXFLAGS --cc"
 fi
 
 ${PYTHON} setup.py build
