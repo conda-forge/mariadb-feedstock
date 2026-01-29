@@ -9,7 +9,8 @@ export PATH="$MARIADB_CC_LIB:$MARIADB_CC_LIBRARY:${PATH}"
 export MARIADB_CONFIG="${PREFIX}/bin/mariadb_config"
 
 if [[ "${target_platform}" == "osx-arm64" ]]; then
-	export CXXFLAGS="$CXXFLAGS --cc"
+	export CXXFLAGS="$CXXFLAGS --cc -arch arm64"
+	export CFLAGS="$CFLAGS -arch arm64"
 fi
 
 ${PYTHON} setup.py build
