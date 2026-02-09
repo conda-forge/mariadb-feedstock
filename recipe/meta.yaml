@@ -35,6 +35,8 @@ requirements:
     - zlib  # [win]
   run:
     - python
+    - packaging
+    - mariadb-connector-c
 
 test:
   imports:
