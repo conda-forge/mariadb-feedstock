@@ -24,6 +24,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - zlib  # [win]
+    - mariadb-connector-c  # [osx]
   host:
     - python
     - wheel
