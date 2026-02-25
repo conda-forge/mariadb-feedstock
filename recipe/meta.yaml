@@ -18,13 +18,15 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ stdlib('c') }}
+    - if: build_platform != host_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - mariadb-connector-c
+    - ${{ compiler('c') }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
     - zlib  # [win]
-    - mariadb-connector-c  # [osx]
   host:
     - python
     - wheel
