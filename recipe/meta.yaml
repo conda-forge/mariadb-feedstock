@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mariadb-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/mariadb-{{ version }}.tar.gz
   sha256: e6d702a53eccf20922e47f2f45cfb5c7a0c2c6c0a46e4ee2d8a80d0ff4a52f34
   patches:
     - 0001-Depend-on-zlib-on-Windows.patch
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/mariadb
 
